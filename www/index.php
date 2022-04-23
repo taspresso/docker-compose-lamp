@@ -1,66 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>LAMP STACK</title>
-        <link rel="stylesheet" href="/assets/css/bulma.min.css">
-    </head>
-    <body>
-        <section class="hero is-medium is-info is-bold">
-            <div class="hero-body">
-                <div class="container has-text-centered">
-                    <h1 class="title">
-                        LAMP STACK
-                    </h1>
-                    <h2 class="subtitle">
-                        Your local development environment
-                    </h2>
-                </div>
-            </div>
-        </section>
-        <section class="section">
-            <div class="container">
-                <div class="columns">
-                    <div class="column">
-                        <h3 class="title is-3 has-text-centered">Environment</h3>
-                        <hr>
-                        <div class="content">
-                            <ul>
-                                <li><?= apache_get_version(); ?></li>
-                                <li>PHP <?= phpversion(); ?></li>
-                                <li>
-                                    <?php
-                                    $link = mysqli_connect("database", "root", "tiger", null);
+<html>
+  <meta charset="utf-8">
+  <meta name="viewreport" content="width=device-width, initial-scale=1.0">
+  <title>
+    ARTWORK SHOP
+  </title>
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+<!-- Sometimes looking at the source code may reveal other hidden elements. Anyway this is flag 1: TCTF{W3b_d3v_is(1/3) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
-/* check connection */
-                                    if (mysqli_connect_errno()) {
-                                        printf("MySQL connecttion failed: %s", mysqli_connect_error());
-                                    } else {
-                                        /* print server version */
-                                        printf("MySQL Server %s", mysqli_get_server_info($link));
-                                    }
-                                    /* close connection */
-                                    mysqli_close($link);
-                                    ?>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <h3 class="title is-3 has-text-centered">Quick Links</h3>
-                        <hr>
-                        <div class="content">
-                            <ul>
-                                <li><a href="/phpinfo.php">phpinfo()</a></li>
-                                <li><a href="http://localhost:<? print $_ENV['PMA_PORT']; ?>">phpMyAdmin</a></li>
-                                <li><a href="/test_db.php">Test DB Connection with mysqli</a></li>
-                                <li><a href="/test_db_pdo.php">Test DB Connection with PDO</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </body>
+  <link rel="stylesheet" type="text/css" href="index.css" />
+
+  <body>
+    <div class="container-fluid banner">
+      <div class="row">
+        <div class="col-md-12">
+          <nav class="navbar navbar-md">
+            <div class="navbar-brand">TASTECH NFT</div>
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">HOME</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="row mt-4">
+
+          <div class="item col-sm-6 col-md-4 mb-3">
+            <a href="2.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">download</a>
+            <a href="1.png" class="fancybox" data-fancybox="gallery1">
+              <img src="1.png" width="50%">
+            </a>
+          </div>
+
+          <div class="item col-sm-6 col-md-4 mb-3">
+            <a href="3.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">download</a>
+            <a href="2.png" class="fancybox" data-fancybox="gallery1">
+              <img src="2.png" width="50%">
+            </a>
+          </div>
+
+          <div class="item col-sm-6 col-md-4 mb-3">
+            <a href="4.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">download</a>
+            <a href="3.png" class="fancybox" data-fancybox="gallery1">
+              <img src="3.png" width="50%">
+            </a>
+          </div>
+
+          <div class="item col-sm-6 col-md-4 mb-3">
+            <a href="5.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">download</a>
+            <a href="4.png" class="fancybox" data-fancybox="gallery1">
+              <img src="4.png" width="50%">
+            </a>
+          </div>
+
+          <div class="item col-sm-6 col-md-4 mb-3">
+            <a href="6.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">download</a>
+            <a href="5.png" class="fancybox" data-fancybox="gallery1">
+              <img src="5.png" width="50%">
+            </a>
+          </div>
+
+          <div class="item col-sm-6 col-md-4 mb-3">
+            <a href="7.php" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">download</a>
+            <a href="6.png" class="fancybox" data-fancybox="gallery1">
+              <img src="6.png" width="50%">
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
